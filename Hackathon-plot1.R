@@ -41,4 +41,4 @@ df<-df %>%
 
 print(df)
 
-ggplot(data=df)+geom_line(mapping = aes(x=date,y=log(total),colour=country))+ggtitle("Total confirmed Covid-19 cases per Million People")
+ggplot(data=df)+geom_line(mapping = aes(x=date,y=total,colour=country)) +ggtitle("Total confirmed Covid-19 cases per Million People")+scale_y_continuous(trans = "log10", labels = scales::comma)
